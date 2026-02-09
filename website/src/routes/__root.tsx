@@ -5,9 +5,9 @@ import ogImagePath from "../../og.png?url";
 
 const siteUrl = "https://learn-skill.sh";
 const siteName = "learn-skill";
-const pageTitle = "learn-skill | Build agent skills you can trust";
+const pageTitle = "learn-skill | Build, inspect, and ship trusted agent skills";
 const pageDescription =
-	"Generate and learn AI agent skills locally so you can inspect what runs before it touches your codebase.";
+	"Scaffold /learn-skill for OpenCode, Cursor, and Claude Code, then generate local skill files you can inspect, edit, and commit before they run on your codebase.";
 const ogImageUrl = `${siteUrl}${ogImagePath}`;
 
 const structuredData = [
