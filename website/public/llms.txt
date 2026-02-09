@@ -1,0 +1,23 @@
+# learn-skill
+
+> learn-skill scaffolds the `/learn-skill` command for OpenCode, Cursor, and Claude Code so teams can generate agent skills as local, editable Markdown files in their own repositories.
+
+This site documents how to install the CLI, generate skills from topics, review generated instructions locally, and version them in git.
+
+## Core
+
+- [Homepage](https://learn-sklll.sh/): Product overview, install command switcher, workflow, and core value points.
+- [Install via npx](https://learn-sklll.sh/): Run `npx learn-skill@latest` to scaffold the command quickly.
+- [Install via npm](https://learn-sklll.sh/): Run `npm install -g learn-skill` for a global install.
+- [Install via yarn](https://learn-sklll.sh/): Run `yarn global add learn-skill` for a global install.
+- [Install via pnpm](https://learn-sklll.sh/): Run `pnpm add -g learn-skill` for a global install.
+- [Install via bun](https://learn-sklll.sh/): Run `bun add -g learn-skill` for a global install.
+
+## Links
+
+- [GitHub repository](https://github.com/onnokh/learn-skill): Source code, issues, and contribution history.
+- [npm package](https://www.npmjs.com/package/learn-skill): Published package metadata, versions, and install details.
+
+## Optional
+
+- [Support the project](https://buymeacoffee.com/onnokh1i): Optional donation link for users who want to support maintenance.
