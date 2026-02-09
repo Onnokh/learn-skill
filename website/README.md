@@ -1,6 +1,6 @@
-# learn-sklll.sh website
+# learn-skill.sh website
 
-One-page TanStack Start site for `learn-sklll.sh`.
+One-page TanStack Start site for `learn-skill.sh`.
 
 ## Run locally
 

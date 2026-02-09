@@ -3,7 +3,7 @@ import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import appCss from "../styles.css?url";
 import ogImagePath from "../../og.png?url";
 
-const siteUrl = "https://learn-sklll.sh";
+const siteUrl = "https://learn-skill.sh";
 const siteName = "learn-skill";
 const pageTitle = "learn-skill | Build agent skills you can trust";
 const pageDescription =

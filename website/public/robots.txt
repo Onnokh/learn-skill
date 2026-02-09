@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
-Sitemap: https://learn-sklll.sh/sitemap.xml
+Sitemap: https://learn-skill.sh/sitemap.xml
