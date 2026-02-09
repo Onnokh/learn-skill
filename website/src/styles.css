@@ -44,7 +44,8 @@ a {
 
 .hero,
 .features,
-.workflow {
+.workflow,
+.agents {
   padding-left: clamp(1.3rem, 3vw, 2.6rem);
   padding-right: clamp(1.3rem, 3vw, 2.6rem);
 }
@@ -383,6 +384,85 @@ a {
   line-height: 1.65;
 }
 
+.agents {
+  padding-top: var(--space);
+  padding-bottom: var(--space);
+}
+
+.agents-head h2 {
+  margin: 0.68rem 0 0;
+  font-size: clamp(1.2rem, 3.1vw, 1.9rem);
+  text-transform: uppercase;
+  line-height: 1.12;
+}
+
+.agents ul {
+  list-style: none;
+  margin: var(--space-sm) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-sm);
+}
+
+.agents li {
+  min-width: 0;
+}
+
+.agents li a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  height: 100%;
+  text-decoration: none;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  padding: 1rem;
+  transition: border-color 120ms ease, transform 120ms ease;
+}
+
+.agents li a:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-2px);
+}
+
+.agent-logo {
+  width: fit-content;
+  height: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+}
+
+.agent-logo img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: none;
+}
+
+.agent-copy h3 {
+  margin: 0;
+  font-size: 0.92rem;
+  text-transform: uppercase;
+}
+
+.agent-copy p {
+  margin: 0.44rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.agent-link {
+  margin-top: auto;
+  color: var(--accent);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
 .footer-dots {
   border-top: 1px solid var(--line);
   padding: var(--space) clamp(1.3rem, 3vw, 2.6rem);
@@ -437,6 +517,10 @@ a {
 
   .workflow li {
     min-height: 0;
+  }
+
+  .agents ul {
+    grid-template-columns: 1fr;
   }
 }
 

@@ -57,6 +57,30 @@ const workflow = [
 	},
 ] as const;
 
+const supportedAgents = [
+	{
+		name: "OpenCode",
+		href: "https://opencode.ai",
+		logoSrc: "/agents/opencode.svg",
+		logoAlt: "OpenCode logo",
+		description: "Open-source AI coding agent for terminal workflows.",
+	},
+	{
+		name: "Cursor",
+		href: "https://cursor.com",
+		logoSrc: "/agents/cursor.svg",
+		logoAlt: "Cursor logo",
+		description: "AI-first code editor built for pair-programming speed.",
+	},
+	{
+		name: "Claude Code",
+		href: "https://www.anthropic.com/claude-code",
+		logoSrc: "/agents/claude.svg",
+		logoAlt: "Claude logo",
+		description: "Claude in your terminal for coding and repository tasks.",
+	},
+] as const;
+
 const ASCII_LOGO = [
 	"    ██╗██╗     ███████╗ █████╗ ██████╗ ███╗   ██╗      ███████╗██╗  ██╗██╗██╗     ██╗     ",
 	"   ██╔╝██║     ██╔════╝██╔══██╗██╔══██╗████╗  ██║      ██╔════╝██║ ██╔╝██║██║     ██║     ",
@@ -89,7 +113,7 @@ function App() {
 				target="_blank"
 				rel="noreferrer"
 			>
-				<pre className="ascii-logo" aria-label="learn-skill">
+				<pre className="ascii-logo">
 					{ASCII_LOGO}
 				</pre>
 			</a>
@@ -204,6 +228,31 @@ function App() {
 							</li>
 						))}
 					</ol>
+				</section>
+
+				<div className="divider" aria-hidden="true" />
+
+				<section className="agents" aria-labelledby="agents-title">
+					<div className="agents-head">
+						<p className="eyebrow">Supported agents</p>
+						<h2 id="agents-title">Works where you already ship</h2>
+					</div>
+					<ul>
+						{supportedAgents.map((agent) => (
+							<li key={agent.name}>
+								<a href={agent.href} target="_blank" rel="noreferrer">
+									<div className="agent-logo">
+										<img src={agent.logoSrc} alt={agent.logoAlt} loading="lazy" />
+									</div>
+									<div className="agent-copy">
+										<h3>{agent.name}</h3>
+										<p>{agent.description}</p>
+									</div>
+									<span className="agent-link">Visit</span>
+								</a>
+							</li>
+						))}
+					</ul>
 				</section>
 
 				<div className="divider" aria-hidden="true" />
