@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "tsup src/cli.ts --format cjs --dts --out-dir dist --clean",
+    "prepack": "npm run build",
     "test": "vitest run",
     "test:watch": "vitest"
   },
