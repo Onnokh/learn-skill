@@ -1,13 +1,14 @@
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import ogImagePath from "../../og.png?url";
 
 const siteUrl = "https://learn-sklll.sh";
 const siteName = "learn-skill";
 const pageTitle = "learn-skill | Build agent skills you can trust";
 const pageDescription =
 	"Generate and learn AI agent skills locally so you can inspect what runs before it touches your codebase.";
-const ogImageUrl = `${siteUrl}/logo512.png`;
+const ogImageUrl = `${siteUrl}${ogImagePath}`;
 
 const structuredData = [
 	{
@@ -22,7 +23,7 @@ const structuredData = [
 		"@type": "Organization",
 		name: siteName,
 		url: siteUrl,
-		logo: `${siteUrl}/logo512.png`,
+		logo: ogImageUrl,
 		sameAs: [
 			"https://github.com/onnokh/learn-skill",
 			"https://www.npmjs.com/package/learn-skill",
@@ -99,6 +100,10 @@ export const Route = createRootRoute({
 			{
 				property: "og:image",
 				content: ogImageUrl,
+			},
+			{
+				property: "og:image:alt",
+				content: "learn-skill landing page preview",
 			},
 			{
 				name: "twitter:card",
