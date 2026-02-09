@@ -124,6 +124,7 @@ function App() {
 						href="https://buymeacoffee.com/onnokh1i"
 						target="_blank"
 						rel="noreferrer"
+						data-umami-event="nav_buy_me_a_coffee_click"
 					>
 						Buy me a coffee
 					</a>
@@ -131,6 +132,7 @@ function App() {
 						href="https://github.com/onnokh/learn-skill"
 						target="_blank"
 						rel="noreferrer"
+						data-umami-event="nav_github_click"
 					>
 						GitHub
 					</a>
@@ -138,6 +140,7 @@ function App() {
 						href="https://www.npmjs.com/package/learn-skill"
 						target="_blank"
 						rel="noreferrer"
+						data-umami-event="nav_npm_package_click"
 					>
 						npm package
 					</a>
