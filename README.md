@@ -1,5 +1,8 @@
 # learn-skill
 
+[![npm version](https://img.shields.io/npm/v/learn-skill?logo=npm)](https://www.npmjs.com/package/learn-skill)
+[![npm downloads](https://img.shields.io/npm/dm/learn-skill?logo=npm)](https://www.npmjs.com/package/learn-skill)
+
 Scaffold `/learn-skill` command wrappers for OpenCode, Cursor, and Claude Code.
 
 Generated files:
