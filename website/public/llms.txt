@@ -6,12 +6,8 @@ This site documents how to install the CLI, generate skills from topics, review 
 
 ## Core
 
-- [Homepage](https://learn-skill.sh/): Product overview, install command switcher, workflow, and core value points.
+- [Homepage](https://learn-skill.sh/): Product overview, install command, workflow, and core value points.
 - [Install via npx](https://learn-skill.sh/): Run `npx learn-skill@latest` to scaffold the command quickly.
-- [Install via npm](https://learn-skill.sh/): Run `npm install -g learn-skill` for a global install.
-- [Install via yarn](https://learn-skill.sh/): Run `yarn global add learn-skill` for a global install.
-- [Install via pnpm](https://learn-skill.sh/): Run `pnpm add -g learn-skill` for a global install.
-- [Install via bun](https://learn-skill.sh/): Run `bun add -g learn-skill` for a global install.
 
 ## Links
 

@@ -5,10 +5,6 @@ export const Route = createFileRoute("/")({ component: App });
 
 const installCommands = {
 	npx: "npx learn-skill@latest",
-	npm: "npm install -g learn-skill",
-	yarn: "yarn global add learn-skill",
-	pnpm: "pnpm add -g learn-skill",
-	bun: "bun add -g learn-skill",
 } as const;
 
 const valuePoints = [
@@ -41,7 +37,7 @@ const workflow = [
 		step: "02",
 		title: "Generate a skill",
 		detail:
-			"Use /learn-skill <topic> inside your agent. It discovers existing skills, researches docs via Context7, and designs the right structure.",
+			"Use /learn-skill <topic> inside your agent. It researches docs via Context7 and designs the right structure.",
 	},
 	{
 		step: "03",
@@ -93,11 +89,9 @@ const ASCII_LOGO = [
 	.join("\n");
 
 function App() {
-	const [activeManager, setActiveManager] =
-		useState<keyof typeof installCommands>("npm");
 	const [copied, setCopied] = useState(false);
 
-	const command = installCommands[activeManager];
+	const command = installCommands.npx;
 
 	const handleCopy = async () => {
 		await navigator.clipboard.writeText(command);
@@ -160,30 +154,6 @@ function App() {
 					<section className="install" aria-label="Install command">
 						<p className="install-label">Scaffold in one command</p>
 						<div className="install-panel">
-							<div
-								className="install-tabs"
-								role="tablist"
-								aria-label="Package manager"
-							>
-								{(
-									Object.keys(installCommands) as Array<
-										keyof typeof installCommands
-									>
-								).map((manager) => (
-									<button
-										key={manager}
-										type="button"
-										role="tab"
-										aria-selected={activeManager === manager}
-										className="install-tab"
-										data-active={activeManager === manager}
-										onClick={() => setActiveManager(manager)}
-									>
-										{manager}
-									</button>
-								))}
-							</div>
-
 							<div className="install-command-row">
 								<div className="install-command" aria-live="polite">
 									<span>$</span>

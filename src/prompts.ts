@@ -14,14 +14,6 @@ Operating constraints:
 Workflow:
 1. Discovery:
    - Infer intent from the topic and available repository context before asking for clarification.
-   - Inspect currently installed skills first (project and global) to learn structure and writing style:
-     - .agents/skills/*/SKILL.md
-     - ~/.agents/skills/*/SKILL.md
-     - .opencode/skills/*/SKILL.md
-     - ~/.config/opencode/skills/*/SKILL.md
-     - .claude/skills/*/SKILL.md
-     - ~/.claude/skills/*/SKILL.md
-   - Capture repository provenance for analyzed skills when possible (from SKILL metadata/source links or "npx skills ls -g" / "npx skills find <skill-name>" output).
 2. Research:
    - Use Context7 for documentation research.
    - If Context7 is unavailable, fall back to official documentation.
@@ -72,7 +64,6 @@ Output requirements:
   - every referenced file exists.
 - If references/ is created, include:
   - references/sources.md (documentation URLs and repositories used, with what each source informed)
-  - references/existing-skills.md (installed skills reviewed, local path, inferred repository/source, and reusable patterns extracted)
 
 If Context7 is unavailable, continue using model context and proceed without blocking.`;
 

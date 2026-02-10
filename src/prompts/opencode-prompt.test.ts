@@ -18,11 +18,7 @@ describe("buildOpenCodeCommandPrompt", () => {
     expect(prompt).toContain("Examples");
     expect(prompt).toContain("third person");
     expect(prompt).toContain("inferring language/framework from topic");
-    expect(prompt).toContain("Inspect currently installed skills first");
-    expect(prompt).toContain("~/.agents/skills/*/SKILL.md");
-    expect(prompt).toContain("npx skills find <skill-name>");
     expect(prompt).toContain("references/sources.md");
-    expect(prompt).toContain("references/existing-skills.md");
     expect(prompt).toContain("Choose one focused workflow");
     expect(prompt).toContain("Prefer progressive disclosure");
     expect(prompt).toContain("name must be <= 64 characters");

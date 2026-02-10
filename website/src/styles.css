@@ -7,8 +7,10 @@
   --line: #2d2d2d;
   --line-strong: #4a4a4a;
   --accent: #8a8a8a;
-  --space: 2.5rem;
-  --space-sm: 1.25rem;
+  --space: 3.25rem;
+  --space-sm: 1.6rem;
+  --page-pad: clamp(1.25rem, 3.4vw, 3.25rem);
+  --gutter: clamp(1.6rem, 3.2vw, 3.2rem);
   --font-display: 'Sora', ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
@@ -34,7 +36,7 @@ a {
 
 .page {
   min-height: 100vh;
-  padding: 2.5rem;
+  padding: var(--page-pad);
 }
 
 .shell {
@@ -48,8 +50,8 @@ a {
 .features,
 .workflow,
 .agents {
-  padding-left: clamp(1.3rem, 3vw, 2.6rem);
-  padding-right: clamp(1.3rem, 3vw, 2.6rem);
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
 }
 
 .brand {
@@ -80,7 +82,7 @@ a {
   display: flex;
   gap: clamp(0.65rem, 1.5vw, 1.3rem);
   justify-content: flex-end;
-  padding: clamp(0.65rem, 1.5vw, 1.3rem);
+  padding: clamp(0.85rem, 2vw, 1.6rem);
   border-bottom: 1px solid var(--line);
 }
 
@@ -231,7 +233,7 @@ a {
   gap: 0.65rem;
   align-items: center;
   justify-content: space-between;
-  padding: 1.15rem;
+  padding: 1.35rem;
 }
 
 .install-command {
@@ -299,7 +301,7 @@ a {
 .feature-row {
   display: grid;
   grid-template-columns: auto minmax(0, 14rem) 1fr;
-  gap: 0 var(--space-sm);
+  gap: 0 0.75rem;
   align-items: baseline;
   padding: var(--space-sm) 0;
   border-bottom: 1px solid var(--line);
@@ -330,6 +332,7 @@ a {
 
 .features p {
   margin: 0;
+  padding-left: 2.25rem;
   color: var(--muted);
   line-height: 1.6;
   font-size: 0.84rem;
@@ -420,7 +423,7 @@ a {
   text-decoration: none;
   border: 1px solid var(--line);
   background: var(--panel-2);
-  padding: 1rem;
+  padding: 1.2rem;
   transition: border-color 120ms ease, transform 120ms ease;
 }
 
@@ -468,7 +471,7 @@ a {
 
 .footer-dots {
   border-top: 1px solid var(--line);
-  padding: var(--space) clamp(1.3rem, 3vw, 2.6rem);
+  padding: var(--space) var(--gutter);
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -508,6 +511,7 @@ a {
   .features p {
     grid-column: 2;
     margin-top: 0.2rem;
+    padding-left: 0;
   }
 
   .features h2 {
@@ -529,7 +533,7 @@ a {
 
 @media (max-width: 640px) {
   .page {
-    padding: 0.8rem;
+    padding: 1rem;
   }
 
   .top-header {
