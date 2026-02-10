@@ -7,6 +7,8 @@
   --line: #2d2d2d;
   --line-strong: #4a4a4a;
   --accent: #8a8a8a;
+  --coffee-highlight-rgb: 0 255 65;
+  --coffee-highlight: rgb(var(--coffee-highlight-rgb));
   --space: 4rem;
   --space-sm: 2rem;
   --page-pad: clamp(1.5rem, 4vw, 4rem);
@@ -101,22 +103,29 @@ a {
   align-items: center;
   margin-right: auto;
   color: var(--text);
-  border-color: var(--line-strong);
+  border-color: rgb(var(--coffee-highlight-rgb) / 0.55);
   background: #0b0b0b;
-  box-shadow: 2px 2px 0 #2a2a2a;
+  box-shadow: 2px 2px 0 #2a2a2a,
+    0 0 0 1px rgb(var(--coffee-highlight-rgb) / 0.2) inset;
   transition: box-shadow 120ms ease, border-color 120ms ease, background 120ms ease;
 }
 
 .top-nav .coffee-link::before {
   content: '> ';
-  color: var(--accent);
+  color: var(--coffee-highlight);
 }
 
 .top-nav .coffee-link:hover {
   color: var(--text);
-  border-color: var(--text);
+  border-color: rgb(var(--coffee-highlight-rgb) / 0.95);
   background: #111;
-  box-shadow: 0 0 0 #2a2a2a;
+  box-shadow: 0 0 0 #2a2a2a,
+    0 0 0 1px rgb(var(--coffee-highlight-rgb) / 0.35) inset;
+}
+
+.top-nav .coffee-link:focus-visible {
+  outline: 2px solid var(--coffee-highlight);
+  outline-offset: 2px;
 }
 
 .top-nav a:hover {
@@ -258,8 +267,8 @@ a {
 }
 
 .copy-button {
-  border: 1px solid var(--line-strong);
-  background: #1f1f1f;
+  border: 1px solid rgb(var(--coffee-highlight-rgb) / 0.5);
+  background: #0f0f0f;
   color: var(--text);
   padding: 0.4rem 0.6rem;
   cursor: pointer;
@@ -270,11 +279,23 @@ a {
   font-family: inherit;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  box-shadow: 2px 2px 0 #2a2a2a,
+    0 0 0 1px rgb(var(--coffee-highlight-rgb) / 0.18) inset;
+  transition: box-shadow 120ms ease, border-color 120ms ease, color 120ms ease,
+    background 120ms ease;
 }
 
 .copy-button:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: rgb(var(--coffee-highlight-rgb) / 0.95);
+  color: var(--coffee-highlight);
+  background: #111;
+  box-shadow: 0 0 0 #2a2a2a,
+    0 0 0 1px rgb(var(--coffee-highlight-rgb) / 0.35) inset;
+}
+
+.copy-button:focus-visible {
+  outline: 2px solid var(--coffee-highlight);
+  outline-offset: 2px;
 }
 
 .copy-button svg {
