@@ -19,6 +19,7 @@
     "LICENSE"
   ],
   "license": "MIT",
+  "homepage": "https://www.learn-skill.sh",
   "publishConfig": {
     "access": "public"
   },

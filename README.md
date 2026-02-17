@@ -5,6 +5,8 @@
 
 Scaffold `/learn-skill` command wrappers for OpenCode, Cursor, and Claude Code.
 
+Website: [www.learn-skill.sh](https://www.learn-skill.sh)
+
 Generated files:
 
 - `~/.config/opencode/commands/learn-skill.md`
